@@ -13,10 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    
-   return view('app');
-});
-Route::get('tasks','Taskconroller@index') ;
+
+Route::get('/','Taskconroller@index') ;
 
 Route::get('tasks/{id}','Taskconroller@show') ;
+Route::post('store','Taskcontroller@store ' );
+Route ::delete('delete/{id}','Taskcontroller@destroy');
+Route::post('update/{id}?','TaskController@update');
